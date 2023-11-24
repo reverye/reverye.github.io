@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>VideoGen Demo</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <style>
+    .video_box{
+      display: flex;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    justify-content: space-around;
+    /* max-width: 1500px; */
+    width: 90%;
+    margin-left: 5%;
+    }
+
+    .results-carousel .item {display: flex;
+    justify-content: center;}
+
+    .video_item{
+      height: auto;
+    max-width: 100%;
+    margin: 25px 15px;
+    cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">VideoGen: A Reference-Guided Latent Diffusion Approach for High Definition Text-to-Video Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <!-- <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Li Xin</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Li Xin</a><sup>*</sup>,</span> -->
+                  <span class="author-block">
+                    <target="_blank"> Xin Li, Wenqing Chu, Ye Wu , Weihang Yuan, Fanglong Liu, Qi Zhang , Fu Li, Haocheng Feng , Errui Ding , Jingdong Wang <br></a>
+                    <target="_blank"> Baidu Inc. </a>
+                  </span>
+                  </div>
+
+                  <!-- <div class="is-size-5 publication-authors">
+                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div> -->
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://github.com/VideoGen/VideoGen/blob/master/static/pdfs/VideoGenv2.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper(29M)</span>
+                      </a>
+                    </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2309.00398" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- More Video Presentations -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h2 class="title is-3">Video Presentations</h2> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop width=80%>
+            <!-- Your video file here -->
+            <source src="static/videos/banner.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop width=80%>
+            <!-- Your video file here -->
+            <source src="static/videos/banner2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop width=80%>\
+            <!-- Your video file here -->
+            <source src="static/videos/banner3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+<div class="video_box" id="video_box">
+
+</div>
+
+<script>
+
+for (let i=1;i<=27;i++)
+{ 
+  let video = document.createElement('video');
+
+video.src =`static/videos/${i}.mp4`;
+// video.class='video_item'
+video.classList.add('video_item');
+
+video.autoplay = false;
+video.controls = true;
+video.loop = true;
+video.muted = true;
+video.height = 240; 
+video.width = 320; 
+
+let firstClick = true; // 用于跟踪是否是第一次点击
+video.addEventListener('click', function () {
+  if (firstClick) {
+    video.poster = `static/videos/${i}_poster.jpg`; // 设置封面图像
+    firstClick = false; // 标记为已经不是第一次点击了
+  } else {
+    video.pause(); // 暂停视频播放
+    video.load(); // 重新加载视频
+    video.play(); // 开始播放视频
+  }
+});
+
+let box = document.getElementById('video_box');
+box.appendChild(video);
+}
+
+
+
+
+</script>
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{li2023videogen,
+      title={VideoGen: A Reference-Guided Latent Diffusion Approach for High Definition Text-to-Video Generation}, 
+      author={Xin Li and Wenqing Chu and Ye Wu and Weihang Yuan and Fanglong Liu and Qi Zhang and Fu Li and Haocheng Feng and Errui Ding and Jingdong Wang},
+      year={2023},
+      eprint={2309.00398},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+  </body>
+  </html>
